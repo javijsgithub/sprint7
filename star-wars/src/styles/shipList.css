@@ -21,4 +21,8 @@
 .ship-link {
     text-decoration: none; /* Esto quita el subrayado del texto */
     color: inherit; /* Esto mantiene el color predeterminado del texto */
-  }
+}
+
+#btn-view-more {
+    margin-left: 575px;
+}

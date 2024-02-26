@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/shipList.css';
 
 const ShipsList = () => {
-  const { ships } = useContext(StarWarsContext);
+  const { ships, loadMoreShips } = useContext(StarWarsContext);
 
   return (
     <div className='container-shipList'>
@@ -16,6 +16,11 @@ const ShipsList = () => {
             </div>
           </Link>
         ))}
+
+       {ships.length < 36 && ( // se mostrara el boton mientras la cantidad de naves del listado sea menor a 36.
+       <button type="button" id='btn-view-more' onClick={loadMoreShips} class="btn btn-secondary">Ver Más...</button>
+       )}
+
     </div>
   );
 };

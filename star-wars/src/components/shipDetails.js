@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { StarWarsContext } from '../context/starWarsContext';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import '../styles/shipDetails.css';
 
 const ShipDetails = () => {
@@ -35,6 +35,7 @@ const ShipDetails = () => {
             </div>
           </div>
         </div>
+        <Link to="/" className="btn btn-secondary">Volver al listado de naves</Link>
     </div>
   );
 };
