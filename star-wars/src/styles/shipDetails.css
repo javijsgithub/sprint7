@@ -1,0 +1,15 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container-shipDetails {
+    background-color: black;
+    padding: 25px;
+    height: 607px;
+}
+.card {
+    background-color: rgb(65, 63, 63);
+    color: rgb(161, 160, 160);
+    font-family: "Anta"; /* de google fonts*/
+}
+
+
+

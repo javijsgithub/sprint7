@@ -16,5 +16,9 @@
     border-radius: 5px;
     width: 900px;
     font-family: "Anta"; /* de google fonts*/
-   
 }
+
+.ship-link {
+    text-decoration: none; /* Esto quita el subrayado del texto */
+    color: inherit; /* Esto mantiene el color predeterminado del texto */
+  }
