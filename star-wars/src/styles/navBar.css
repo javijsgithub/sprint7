@@ -1,0 +1,47 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.navbar {
+    color: black;
+    margin-bottom: 25px;
+    border: 1px solid rgb(65, 63, 63);
+    padding: 0px;
+}
+
+#btn-home {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    margin-right: 4px;
+    margin-left: 550px;
+    border-radius: 0px;
+}
+#btn-home:hover {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+#btn-home.active {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+
+#btn-starships {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+}
+#btn-starships:hover {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+#btn-starships.active {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+
+

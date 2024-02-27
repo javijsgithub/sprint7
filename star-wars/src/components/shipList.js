@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import { StarWarsContext } from '../context/starWarsContext';
 import { Link } from 'react-router-dom';
+import Navbar from './navBar';
 import '../styles/shipList.css';
 
 const ShipsList = () => {
   const { ships, loadMoreShips } = useContext(StarWarsContext);
 
   return (
+   
     <div className='container-shipList'>
+       <Navbar />
         {ships.map((ship, index) => (
           <Link to={`/ship/${index}`} key={index} className='ship-link'>
             <div className='container-ships'>

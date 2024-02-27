@@ -3,7 +3,6 @@
 
 .container-shipDetails {
     background-color: black;
-    padding: 25px;
     height: 607px;
 }
 
@@ -11,6 +10,7 @@
     background-color: rgb(65, 63, 63);
     color: rgb(161, 160, 160);
     font-family: "Anta"; /* de google fonts*/
+    border-radius: 0px;
 }
 
 .btn {

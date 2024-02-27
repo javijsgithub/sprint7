@@ -1,0 +1,38 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background-color: black;
+    padding: 10px;
+}
+
+.container-welcome {
+    background-color:  rgb(65, 63, 63);
+    color: gray;
+    padding: 25px;
+    border-radius: 0px;
+    margin-top: 15px;
+    font-family: "Anta"; /* de google fonts*/
+}
+
+.proposito {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: gray;
+    font-family: "Anta"; /* de google fonts*/
+}
+
+#btn-go {
+     background-color: black;
+     color: rgb(65, 63, 63);
+     border: 1px solid rgb(65, 63, 63);
+     margin-top: 10px;
+     border-radius: 0px;
+     font-family: "Anta"; /* de google fonts*/
+ }
+ #btn-go:hover {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+ }
+
+ 
