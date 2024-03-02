@@ -1,47 +1,64 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-
-.navbar {
-    color: black;
-    margin-bottom: 25px;
-    border: 1px solid rgb(65, 63, 63);
-    padding: 0px;
+.container-header {
+    background-color: transparent;
+    margin-bottom: 20px;
 }
 
-#btn-home {
-    background-color: black;
-    color: rgb(65, 63, 63);
-    border: 1px solid rgb(65, 63, 63);
-    margin-right: 4px;
-    margin-left: 550px;
-    border-radius: 0px;
-}
-#btn-home:hover {
-    background-color: rgb(65, 63, 63);
-    color: black;
-    border: 1px solid black;
-}
-#btn-home.active {
-    background-color: rgb(65, 63, 63);
-    color: black;
-    border: 1px solid black;
+.redes {
+    color: gray;
 }
 
-#btn-starships {
+.starwars-logo {
+    margin-left: 90px;
+}
+
+#btn-log {
     background-color: black;
     color: rgb(65, 63, 63);
     border: 1px solid rgb(65, 63, 63);
     border-radius: 0px;
+    margin-left: 252px;
 }
-#btn-starships:hover {
+#btn-log:hover {
     background-color: rgb(65, 63, 63);
     color: black;
     border: 1px solid black;
 }
-#btn-starships.active {
+
+#btn-sign {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+    margin-left: 5px;
+}
+#btn-sign:hover {
     background-color: rgb(65, 63, 63);
     color: black;
     border: 1px solid black;
+}
+
+#btn-log-out {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+    margin-left: 335px;
+}
+#btn-log-out:hover {
+    background-color: rgb(65, 63, 63);
+    color: black;
+    border: 1px solid black;
+}
+
+.container-datos {
+    color: gray;
+    margin-top: 15px;
+}
+
+.p-usuario {
+    margin-left: 225px;
 }
 
 

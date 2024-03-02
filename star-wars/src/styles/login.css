@@ -1,0 +1,42 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.container-form-log {
+    border: 1px solid gray;
+    width: max-content;
+    padding: 25px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: "Anta"; /* de google fonts*/
+}
+
+.container-form-log h2 {
+    color: gray;
+}
+
+.input-email-log {
+    background-color: rgb(65, 63, 63);
+    color: gray;
+    border: 1px solid black;
+}
+
+.input-password-log {
+    background-color: rgb(65, 63, 63);
+    color: gray;
+    border: 1px solid black;
+
+    margin-left: 5px;
+}
+
+#btn-in-log {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+    margin-top: 9px;
+}
+#btn-in-log:hover {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+}

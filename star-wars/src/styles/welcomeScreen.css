@@ -7,17 +7,18 @@ body {
 
 .container-welcome {
     background-color:  rgb(65, 63, 63);
-    color: gray;
+    color: black;
     padding: 25px;
     border-radius: 0px;
     margin-top: 15px;
     font-family: "Anta"; /* de google fonts*/
+    text-align: center;
 }
 
 .proposito {
     margin-top: 15px;
     margin-bottom: 25px;
-    color: gray;
+    color: black;
     font-family: "Anta"; /* de google fonts*/
 }
 
@@ -31,7 +32,7 @@ body {
  }
  #btn-go:hover {
     background-color: rgb(65, 63, 63);
-    color: rgb(155, 155, 155);
+    color: black;
     border: 1px solid black;
  }
 

@@ -36,6 +36,6 @@ body {
 }
 #btn-view-more:hover {
     background-color: rgb(65, 63, 63);
-    color: rgb(155, 155, 155);
+    color: black;
     border: 1px solid black;
 }

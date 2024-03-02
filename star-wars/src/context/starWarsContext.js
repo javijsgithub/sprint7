@@ -5,6 +5,8 @@ export const StarWarsContext = createContext();
 const StarWarsContextProvider = (props) => {
   const [ships, setShips] = useState([]);
   const [nextPage, setNextPage] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchShips = async () => {
@@ -14,21 +16,78 @@ const StarWarsContextProvider = (props) => {
           throw new Error('Failed to fetch starships');
         }
         const data = await response.json();
-        setNextPage(data.next); 
-        const shipsWithData = await Promise.all(data.results.map(async (ship) => {
+          setNextPage(data.next); 
+            const shipsWithData = await Promise.all(data.results.map(async (ship) => {
             const shipId = ship.url.match(/\/(\d+)\/$/)[1];
             const shipImageUrl = `https://starwars-visualguide.com/assets/img/starships/${shipId}.jpg`;
             const shipData = await (await fetch(ship.url)).json();
             return { ...shipData, image: shipImageUrl };
           }));
           setShips(shipsWithData);
-      } catch (error) {
+        }   catch (error) {
         console.error('Error fetching starships:', error);
       }
     };
 
     fetchShips();
   }, []);
+
+  const handleRegister = async (userData) => {
+    try {
+      const checkEmailResponse = await fetch(`https://reqres.in/api/users?email=${userData.email}`);
+      const checkEmailData = await checkEmailResponse.json();
+      if (checkEmailData.data.length > 0) {
+        throw new Error('El correo electrónico ya está registrado');
+      }
+
+      const response = await fetch('https://reqres.in/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setUser(data);
+        setLoggedIn(true);
+        console.log('Usuario registrado exitosamente:', data);
+      } else {
+        console.error('Error registrando usuario:', data.error);
+      }
+    } catch (error) {
+      console.error('Error registrando usuario:', error);
+    }
+  };
+
+  const handleLogin = async (userData) => {
+    try {
+      const response = await fetch('https://reqres.in/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setUser(data); 
+        setLoggedIn(true);
+        console.log('Inicio de sesión exitoso:', data);
+       // fetchUserData(userData.email);
+
+      } else {
+        console.error('Error iniciando sesión:', data.error);
+      }
+    } catch (error) {
+      console.error('Error iniciando sesión:', error);
+    }
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
+
 
   const loadMoreShips = async () => {
     if (nextPage) {
@@ -52,8 +111,52 @@ const StarWarsContextProvider = (props) => {
     }
   };
 
+  /*const fetchUserData = async (email) => {
+    try {
+      const response = await fetch(`https://reqres.in/api/users?email=${email}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error al obtener los datos del usuario');
+      }
+  
+      const data = await response.json();
+  
+      
+      if (data.data && data.data.length > 0) {
+        const userData = data.data.map(user => user.email === email); // Busca el usuario por correo electrónico
+        setUser(userData); 
+      } else {
+        console.error('No se encontraron datos de usuario en la respuesta');
+      }
+    } catch (error) {
+      console.error('Error al obtener los datos del usuario:', error);
+    }
+  };
+  useEffect(() => {
+    if (loggedIn) { 
+      fetchUserData();
+    }
+  }, [loggedIn]);*/
+
+
   return (
-    <StarWarsContext.Provider value={{ ships, loadMoreShips }}>
+    <StarWarsContext.Provider value={{ 
+      user,
+      ships, 
+      nextPage, 
+      loggedIn,
+      handleRegister, 
+      handleLogin, 
+      handleLogout,
+      loadMoreShips,
+      //fetchUserData
+       }}
+    >
       {props.children}
     </StarWarsContext.Provider>
   );

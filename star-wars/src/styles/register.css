@@ -1,0 +1,46 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.container-form-sign {
+    border: 1px solid gray;
+    width: max-content;
+    padding: 25px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: "Anta"; /* de google fonts*/
+}
+
+.container-form-sign h2 {
+    color: gray;
+}
+
+.input-email-sign {
+    background-color: rgb(65, 63, 63);
+    color: gray;
+    border: 1px solid black;
+}
+
+.input-password-sign {
+    background-color: rgb(65, 63, 63);
+    color: gray;
+    border: 1px solid black;
+
+    margin-left: 5px;
+}
+
+#btn-in-sign {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+    margin-top: 9px;
+}
+#btn-in-sign:hover {
+    background-color: rgb(65, 63, 63);
+    color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+
+.error-message {
+    color: red;
+}
