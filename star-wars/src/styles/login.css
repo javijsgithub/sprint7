@@ -40,3 +40,17 @@
     color: rgb(155, 155, 155);
     border: 1px solid black;
 }
+
+#btn-home-login {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#btn-home-login:hover {
+    background-color: rgb(65, 63, 63);
+    color: black;
+    border: 1px solid black;
+}

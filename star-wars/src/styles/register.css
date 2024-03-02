@@ -41,6 +41,20 @@
     border: 1px solid black;
 }
 
+#btn-home-register {
+    background-color: black;
+    color: rgb(65, 63, 63);
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#btn-home-register:hover {
+    background-color: rgb(65, 63, 63);
+    color: black;
+    border: 1px solid black;
+}
+
 .error-message {
     color: red;
 }

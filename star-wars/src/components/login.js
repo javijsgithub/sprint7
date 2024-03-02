@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { StarWarsContext } from '../context/starWarsContext';
 import '../styles/login.css';
 
@@ -22,7 +23,9 @@ const Login = () => {
   };
 
   return (
-    <div className='container-form-log'>
+    <div>
+      <Link to="/" className='btn btn-sm btn-outline-secondary' type="button" id='btn-home-login'>HOME</Link>
+      <div className='container-form-log'>
       <h2>Inicia sesión</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -43,6 +46,9 @@ const Login = () => {
         <button type="submit" className="btn btn-secondary" id='btn-in-log'>Iniciar sesión</button>
       </form>
     </div>
+     
+    </div>
+    
   );
 };
 
