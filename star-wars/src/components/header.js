@@ -32,7 +32,7 @@ function Header () {
           <FaInstagram /> <FaFacebook /> <FaSquareXTwitter /> <FaYoutube />
           </div>
           <div className="col logo">
-            <img src= {require(`../images/Star Wars_ A Visual Guide_files/Star-Wars-symbol.jpg`)} alt="Logo StarWars" width="200" height="100" className="starwars-logo" />
+            <img src= {require(`../images/Star-Wars-symbol.jpg`)} alt="Logo StarWars" width="200" height="100" className="starwars-logo" />
           </div>
           <div className="col log-sign">
           {loggedIn ? (

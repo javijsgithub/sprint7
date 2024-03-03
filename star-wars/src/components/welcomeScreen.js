@@ -8,11 +8,11 @@ function WelcomeScreen() {
       <div className='container-content'>
          <Navbar />
         <div className="container-welcome shadow p-3">
-          <h1>BIENVENIDO/A A NUESTRA WEB DE STARWARS</h1>
-          <h5 className='proposito'>Esta aplicación te permitirá visualizar nuestro listado de naves con todos sus detalles.</h5>
+          <h1>WELCOME TO OUR STAR WARS WEBSITE</h1>
+          <h5 className='proposito'>This application will allow you to view our list of ships with all their details.</h5>
         </div>
         <div className='container-btn-go'>
-          <Link to="/list" className="btn btn-secondary" id='btn-go'>Ir al listado de naves</Link>
+          <Link to="/list" className="btn btn-secondary" id='btn-go'>Go to ship list</Link>
         </div>
       </div>
     );

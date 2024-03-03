@@ -13,6 +13,16 @@
     border-radius: 0px;
 }
 
+.container-shipDetails h6 {
+    margin-bottom: 5px;
+    border-top: 1px solid rgb(65, 63, 63);
+    border-bottom: 1px solid rgb(65, 63, 63);
+    border-left: 0px;
+    border-right: 0px;
+    color: rgb(107, 107, 107);
+    font-family: "Anta"; /* de google fonts*/
+}
+
 
 
 

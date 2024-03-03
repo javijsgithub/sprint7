@@ -21,7 +21,7 @@ const ShipsList = () => {
         ))}
 
        {ships.length < 36 && ( // se mostrara el boton mientras la cantidad de naves del listado sea menor a 36.
-       <button type="button" id='btn-view-more' onClick={loadMoreShips} class="btn btn-secondary">Ver Más...</button>
+       <button type="button" id='btn-view-more' onClick={loadMoreShips} class="btn btn-secondary">View more...</button>
        )}
 
     </div>

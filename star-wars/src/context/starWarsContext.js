@@ -32,6 +32,54 @@ const StarWarsContextProvider = (props) => {
     fetchShips();
   }, []);
 
+  useEffect(() => {
+    const fetchPilotsForShips = async () => {
+      try {
+        const shipsWithPilots = await Promise.all(ships.map(async (ship) => {
+          const pilotsData = await Promise.all(ship.pilots.map(async (pilotUrl) => {
+            const pilotResponse = await fetch(pilotUrl);
+            const pilotData = await pilotResponse.json();
+            const pilotId = pilotUrl.match(/\/(\d+)\/$/)[1];
+            const pilotImageUrl = `https://starwars-visualguide.com/assets/img/characters/${pilotId}.jpg`;
+            return { ...pilotData, image: pilotImageUrl };
+          }));
+          return { ...ship, pilots: pilotsData };
+        }));
+        
+        // Actualizar el estado con los pilotos de las naves
+        setShips(shipsWithPilots);
+      } catch (error) {
+        console.error('Error fetching pilots:', error);
+      }
+    };
+  
+    fetchPilotsForShips();
+  }, [ships]);
+
+  useEffect(() => {
+    const fetchFilmsForShips = async () => {
+      try {
+        const shipsWithFilms = await Promise.all(ships.map(async (ship) => {
+          const filmsData = await Promise.all(ship.films.map(async (filmUrl) => {
+            const filmResponse = await fetch(filmUrl);
+            const filmData = await filmResponse.json();
+            const filmId = filmUrl.match(/\/(\d+)\/$/)[1];
+            const filmImageUrl = `https://starwars-visualguide.com/assets/img/films/${filmId}.jpg`;
+            return { ...filmData, image: filmImageUrl };
+          }));
+          return { ...ship, films: filmsData };
+        }));
+  
+        // Actualiza el estado con la información de las películas de las naves
+        setShips(shipsWithFilms);
+      } catch (error) {
+        console.error('Error fetching films:', error);
+      }
+    };
+  
+    fetchFilmsForShips();
+  }, [ships]);
+
   const handleRegister = async (userData) => {
     try {
       const checkEmailResponse = await fetch(`https://reqres.in/api/users?email=${userData.email}`);
