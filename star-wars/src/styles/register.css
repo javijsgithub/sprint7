@@ -24,7 +24,6 @@
     background-color: rgb(65, 63, 63);
     color: gray;
     border: 1px solid black;
-
     margin-left: 5px;
 }
 
@@ -57,4 +56,12 @@
 
 .error-message {
     color: red;
+}
+
+@media (max-width: 768px) {
+
+    .container-form-sign {
+        margin-top: 100px;
+    }
+
 }

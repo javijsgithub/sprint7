@@ -3,7 +3,23 @@
 
 .container-shipDetails {
     background-color: black;
-    height: 607px;
+    height: max-content;
+}
+
+.card-ship {
+    background-color: rgb(65, 63, 63);
+    color: black;
+    font-family: "Anta"; /* de google fonts*/
+    border-radius: 0px;
+    border: 1px solid rgb(65, 63, 63);
+}
+
+#img-card-shipDetails {
+    border-right: 2px solid #778899;
+}
+
+.card-body {
+    padding: 8px;
 }
 
 .card {
@@ -23,6 +39,16 @@
     font-family: "Anta"; /* de google fonts*/
 }
 
+
+@media (max-width: 768px) {
+
+    #img-card-shipDetails {
+        border-right: 0px;
+        border-bottom: 2px solid #778899;
+    }
+
+    
+}
 
 
 

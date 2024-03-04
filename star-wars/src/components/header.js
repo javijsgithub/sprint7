@@ -27,7 +27,7 @@ function Header () {
 
     return (
       <div className="container-header">
-        <div className="row justify-content-between">
+        <div className="row-header">
           <div className="col redes">
           <FaInstagram /> <FaFacebook /> <FaSquareXTwitter /> <FaYoutube />
           </div>
@@ -35,26 +35,19 @@ function Header () {
             <img src= {require(`../images/Star-Wars-symbol.jpg`)} alt="Logo StarWars" width="200" height="100" className="starwars-logo" />
           </div>
           <div className="col log-sign">
-          {loggedIn ? (
-            <>
+            {loggedIn ? (
+              <>
               <Link to="/" onClick={handleLogoutClick} className="btn btn-secondary" id='btn-log-out'>LOG OUT</Link>
-              <div className='container-datos'>
-              {user ? (
-                <p className='p-usuario'>{user.first_name} {user.last_name}</p>
-              ) : (
-                <p></p>
-              )}
-              </div>
-            </>
-          ) : (
-            <Link to="/login" className="btn btn-secondary" id='btn-log'>LOG IN</Link>
-          )}
-          {!loggedIn && (
-            <Link to="/register" className="btn btn-secondary" id='btn-sign'>SIGN UP</Link>
-          )}
+              </>
+            ) : (
+              <Link to="/login" className="btn btn-secondary" id='btn-log-in'>LOG IN</Link>
+            )}
+            {!loggedIn && (
+              <Link to="/register" className="btn btn-secondary" id='btn-sign-up'>SIGN UP</Link>
+            )}
+          </div>
         </div>
       </div>
-    </div>
     )
 }
 

@@ -8,8 +8,8 @@ function Navbar () {
     return (
         <div className='container-navbar'>
           <Header />
-          <nav className="navbar">
-            <form class="container-fluid justify-content-start">
+          <nav className="navbar d-flex justify-content-center">
+            <form class="container-form">
             <Link to="/" className={`btn btn-sm btn-outline-secondary ${location.pathname === '/' ? 'active' : ''}`} type="button" id='btn-home'>HOME</Link>
             <Link to="/list" className={`btn btn-sm btn-outline-secondary ${location.pathname === '/list' ? 'active' : ''}`} type="button" id='btn-starships'>STARSHIPS</Link>
             </form>

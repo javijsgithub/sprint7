@@ -9,7 +9,7 @@ const ShipsList = () => {
 
   return (
    
-    <div className='container-shipList'>
+    <div className='container-ship-list'>
        <Navbar />
         {ships.map((ship, index) => (
           <Link to={`/ship/${index}`} key={index} className='ship-link'>
@@ -19,10 +19,12 @@ const ShipsList = () => {
             </div>
           </Link>
         ))}
-
-       {ships.length < 36 && ( // se mostrara el boton mientras la cantidad de naves del listado sea menor a 36.
+        <div className='btn-vm'>
+        {ships.length < 36 && ( // se mostrara el boton mientras la cantidad de naves del listado sea menor a 36.
        <button type="button" id='btn-view-more' onClick={loadMoreShips} class="btn btn-secondary">View more...</button>
        )}
+        </div>
+       
 
     </div>
   );

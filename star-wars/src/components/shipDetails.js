@@ -20,10 +20,10 @@ const ShipDetails = () => {
     <div className='container-shipDetails'>
       <Navbar />
         <h6>SHIPS:</h6>
-        <div className="card mb-3">
+        <div className="card-ship mb-3">
           <div className="row g-0">
             <div className="col-md-5">
-              <img src={ship.image} className="img-fluid rounded-start" alt={ship.name} style={{ borderRight: "1px solid #778899" }} />
+              <img src={ship.image} className="img-fluid" alt={ship.name} id='img-card-shipDetails'/>
             </div>
               <div className="col-md-7">
                 <div className="card-body">
@@ -51,7 +51,7 @@ const ShipDetails = () => {
                 </div>
               </div>
             ))}
-            {ship.pilots.length === 0 && <p>No hay pilotos disponibles</p>}
+            {ship.pilots.length === 0 && <p>No pilots available</p>}
           </div>
 
           <h6>FILMS:</h6>
@@ -70,7 +70,7 @@ const ShipDetails = () => {
                 </div>
               </div>
             ))}
-            {ship.films.length === 0 && <p>No hay películas disponibles</p>}
+            {ship.films.length === 0 && <p>No movies available</p>}
           </div>
     </div>
   );

@@ -1,39 +1,56 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 .container-header {
-    background-color: transparent;
     margin-bottom: 20px;
+}
+
+.row-header {
+    display: flex;
+    width: 100%;
 }
 
 .redes {
     color: gray;
 }
 
-.starwars-logo {
-    margin-left: 90px;
+.logo {
+    text-align: center;
 }
 
-#btn-log {
+.starwars-logo {
+    background-color: transparent;
+}
+
+.log-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#btn-log-in {
     background-color: black;
     color: rgb(65, 63, 63);
     border: 1px solid rgb(65, 63, 63);
     border-radius: 0px;
-    margin-left: 252px;
+    width: max-content;
+    height: max-content;
 }
-#btn-log:hover {
+#btn-log-in:hover {
     background-color: rgb(65, 63, 63);
     color: black;
     border: 1px solid black;
 }
 
-#btn-sign {
+#btn-sign-up {
     background-color: black;
     color: rgb(65, 63, 63);
     border: 1px solid rgb(65, 63, 63);
     border-radius: 0px;
     margin-left: 5px;
+    width: max-content;
+    height: max-content;
 }
-#btn-sign:hover {
+#btn-sign-up:hover {
     background-color: rgb(65, 63, 63);
     color: black;
     border: 1px solid black;
@@ -44,7 +61,8 @@
     color: rgb(65, 63, 63);
     border: 1px solid rgb(65, 63, 63);
     border-radius: 0px;
-    margin-left: 335px;
+    height: max-content;
+    align-items: flex-end;
 }
 #btn-log-out:hover {
     background-color: rgb(65, 63, 63);
@@ -52,13 +70,37 @@
     border: 1px solid black;
 }
 
-.container-datos {
-    color: gray;
-    margin-top: 15px;
+
+@media (max-width: 767.98px) { 
+
+    .log-sign {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    #btn-log-in {
+        background-color: black;
+        color: rgb(65, 63, 63);
+        border: 1px solid rgb(65, 63, 63);
+        border-radius: 0px;
+        width: 86px;
+        height: max-content;
+        margin-bottom: 5px;
+    }
+
+    #btn-sign-up {
+        background-color: black;
+        color: rgb(65, 63, 63);
+        border: 1px solid rgb(65, 63, 63);
+        border-radius: 0px;
+        width: max-content;
+        height: max-content;
+    }
+
 }
 
-.p-usuario {
-    margin-left: 225px;
-}
+
 
 

@@ -26,24 +26,24 @@ const Login = () => {
     <div>
       <Link to="/" className='btn btn-sm btn-outline-secondary' type="button" id='btn-home-login'>HOME</Link>
       <div className='container-form-log'>
-      <h2>Inicia sesión</h2>
+      <h2>Log in</h2>
       <form onSubmit={handleSubmit}>
         <input
           className='input-email-log'
           type="email"
-          placeholder="Correo electrónico"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           className='input-password-log'
           type="password"
-          placeholder="Contraseña"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <br/>
-        <button type="submit" className="btn btn-secondary" id='btn-in-log'>Iniciar sesión</button>
+        <button type="submit" className="btn btn-secondary" id='btn-in-log'>Log in</button>
       </form>
     </div>
      

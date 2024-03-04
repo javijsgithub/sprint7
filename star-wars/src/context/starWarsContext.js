@@ -70,7 +70,7 @@ const StarWarsContextProvider = (props) => {
           return { ...ship, films: filmsData };
         }));
   
-        // Actualiza el estado con la información de las películas de las naves
+        // Actualiza el estado con la información de las películas
         setShips(shipsWithFilms);
       } catch (error) {
         console.error('Error fetching films:', error);
