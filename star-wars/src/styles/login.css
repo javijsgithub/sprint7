@@ -3,8 +3,10 @@
 
 .container-form-log {
     border: 1px solid gray;
-    width: max-content;
-    padding: 25px;
+    width: min-content;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     margin-top: 100px;
     font-family: "Anta"; /* de google fonts*/
@@ -18,13 +20,13 @@
     background-color: rgb(65, 63, 63);
     color: gray;
     border: 1px solid black;
+    margin-bottom: 5px;
 }
 
 .input-password-log {
     background-color: rgb(65, 63, 63);
     color: gray;
     border: 1px solid black;
-    margin-left: 5px;
 }
 
 #btn-in-log {

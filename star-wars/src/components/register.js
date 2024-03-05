@@ -30,30 +30,30 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className='container-fluid' id='container-signup'>
       <Link to="/" className='btn btn-sm btn-outline-secondary' type="button" id='btn-home-register'>HOME</Link>
       <div className='container-form-sign'>
-      <h2>Sign up</h2>
-      {error && <div className="error-message">{error}</div>} {/* Mostrar mensaje de error */}
-      <form onSubmit={handleSubmit}>
-        <input
-          className='input-email-sign'
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          className='input-password-sign'
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br/>
-        <button type="submit" className="btn btn-secondary" id='btn-in-sign'>Log in</button>
-      </form>
-    </div>
+        <h2>Sign up</h2>
+          {error && <div className="error-message">{error}</div>} {/* Mostrar mensaje de error */}
+          <form onSubmit={handleSubmit}>
+            <input
+              className='input-email-sign'
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              className='input-password-sign'
+              type="password"
+              placeholder="Password"
+             value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <br/>
+            <button type="submit" className="btn btn-secondary" id='btn-in-sign'>Log in</button>
+          </form>
+      </div>
     </div>
     
   );

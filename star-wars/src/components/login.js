@@ -23,32 +23,30 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className='container-fluid' id='container-login'>
       <Link to="/" className='btn btn-sm btn-outline-secondary' type="button" id='btn-home-login'>HOME</Link>
       <div className='container-form-log'>
-      <h2>Log in</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          className='input-email-log'
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          className='input-password-log'
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br/>
-        <button type="submit" className="btn btn-secondary" id='btn-in-log'>Log in</button>
-      </form>
+        <h2>Log in</h2>
+         <form onSubmit={handleSubmit}>
+          <input
+            className='input-email-log'
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            className='input-password-log'
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <br/>
+          <button type="submit" className="btn btn-secondary" id='btn-in-log'>Log in</button>
+        </form>
+      </div>
     </div>
-     
-    </div>
-    
   );
 };
 
